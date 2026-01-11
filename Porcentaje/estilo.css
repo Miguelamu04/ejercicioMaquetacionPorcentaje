@@ -1,0 +1,146 @@
+/* ================= ESTRUCTURA HTML ================= */
+html {
+    /* Mantenemos medidas fijas en el contenedor raíz por requisito */
+    width: 1260px;
+    height: 545px;
+    margin: 0 auto; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ================= BODY ================= */
+body {
+    /* El body hereda el 100% (1260px) del html */
+    width: 100%;
+    height: 100%;
+    /* 50px / 16px = 3.125rem */
+    margin-top: 3.125rem; 
+}
+
+/* ================= HEADER ================= */
+header {
+    /* 45px / 16px = 2.8125rem */
+    height: 2.8125rem; 
+    background-color: cadetblue;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    float: left;
+    /* 8px / 16 = 0.5rem | 10px / 16 = 0.625rem */
+    padding: 0.5rem 0.625rem; 
+}
+
+#boton3 {
+    float: right;
+}
+
+/* ================= CAJA IZQUIERDA ================= */
+#primeraSeccion {
+    /* (800px ancho / 1260px padre) * 100 = 63.492% */
+    width: 63.492%; 
+    /* 400px / 16px = 25rem */
+    min-height: 25rem; 
+    float: left;
+    /* (20px margen / 1260px padre) * 100 = 1.587% */
+    margin-left: 1.587%; 
+    /* 30px / 16 = 1.875rem | (10px padding / 1260px padre) * 100 = 0.793% */
+    padding: 1.875rem 0.793% 0 0.793%; 
+    /* 16px / 16 = 1rem */
+    font-size: 1rem;
+}
+
+#primeraSeccion p {
+    /* 4 veces el tamaño de fuente actual (16px * 4 = 64px) */
+    margin-bottom: 4em;
+}
+
+/* ================= FORMULARIO ================= */
+form {
+    /* (70px padding / 800px padre #primeraSeccion) * 100 = 8.75% */
+    padding-left: 8.75%;
+}
+
+label {
+    display: block;
+    /* 1 vez el tamaño de fuente (16px) */
+    margin-bottom: 1em;
+}
+
+input[type="text"],
+input[type="email"] {
+    /* (500px ancho / 800px padre efectivo) * 100 = 62.5% */
+    width: 62.5%; 
+    /* 10px / 16px = 0.625rem */
+    padding-left: 0.625rem;
+    margin-bottom: 1em;
+}
+
+input[type="submit"] {
+    display: block;
+    margin-top: 1em;
+    /* (150px ancho / 800px padre efectivo) * 100 = 18.75% */
+    width: 18.75%; 
+    /* Altura basada en el texto interno: 2 veces la fuente */
+    height: 2em;
+    background-color: #D8D8D8;
+    border: none;
+    cursor: pointer;
+}
+
+/* ================= CAJA DERECHA ================= */
+#segundaSeccion {
+    /* (400px ancho / 1260px padre) * 100 = 31.746% */
+    width: 31.746%;
+    /* 400px / 16px = 25rem */
+    min-height: 25rem;
+    float: left;
+    /* (20px margen / 1260px padre) * 100 = 1.587% */
+    margin-left: 1.587%; 
+    /* 50px / 16px = 3.125rem */
+    padding-top: 3.125rem;
+    background-color: lightblue;
+}
+
+#segundaSeccion img {
+    /* (150px ancho imagen / 400px padre #segundaSeccion) * 100 = 37.5% */
+    width: 37.5%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    /* 100px / 16px = 6.25rem */
+    height: 6.25rem; 
+    background-color: darkgray;
+    clear: both;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* ================= MEDIA QUERY: FORMULARIO ================= */
+
+/* Cuando el ancho de pantalla baja de 768px, los elementos pasan a ocupar el 100% del contenedor */
+@media (max-width: 768px) {
+
+    input[type="text"], input[type="email"] {
+        /* Se elimina el porcentaje de 62.5% para que ocupe todo el ancho disponible */
+        width: 100%;
+    }
+
+    input[type="submit"] {
+        /* Ajuste manual para que el botón sea más cómodo en dispositivos táctiles */
+        width: 50%; 
+    }
+}

@@ -1,6 +1,5 @@
 /* ================= ESTRUCTURA HTML ================= */
 html {
-    /* Mantenemos medidas fijas en el contenedor raíz por requisito */
     width: 1260px;
     height: 545px;
     margin: 0 auto; 
@@ -87,7 +86,6 @@ input[type="submit"] {
     margin-top: 1em;
     /* (150px ancho / 800px padre efectivo) * 100 = 18.75% */
     width: 18.75%; 
-    /* Altura basada en el texto interno: 2 veces la fuente */
     height: 2em;
     background-color: #D8D8D8;
     border: none;
@@ -143,4 +141,5 @@ footer p {
         /* Ajuste manual para que el botón sea más cómodo en dispositivos táctiles */
         width: 50%; 
     }
+
 }
